@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData()
+        {
+            // alert("Hello World");
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+            let dob=document.getElementById("dob").value;
+            let users=[]
+            let user={
+                name:name,
+                email:email,password:password,
+                dob:dob
+            }
+            users.push(user)
+            let l=users.length
+            console.log(users)
+            console.log(l)
+            for(let i=0;i<len;i++)
+            {
+                console.log()
+            }
+            
+            data.innerHTML=name+" | "+email+" | "+password+" | "+dob
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p><input type="text" id="name" placeholder="Enter Username"></p>
+    <p><input type="text" id="email" placeholder="Enter Email"></p>
+    <p><input type="password" id="password" placeholder="Enter Password"></p>
+    <p><input type="datetime-local" id="dob"></p>
+    <button onclick="showData()">Register</button>
+    
+    <hr />
+    <div id="data">Testing</div>
+</body>
+</html>

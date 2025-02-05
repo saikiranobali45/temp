@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Using While Loop")
+        let i=1
+        while(i<=18)
+    {
+        console.log("Value of I is: "+i)
+        i+=1
+    }
+    console.log("Using For Loop")
+    for(let i=1;i<=18;i++)
+    {
+        console.log("value of I is: "+i)
+    }
+    let players = ["Rohit", "Virat", "Rahul", "Bumrah"];
+    for(let i=0;i<4;i++)
+    {
+        console.log(players[i])
+    }
+    let temp=[]
+    temp.push(10)
+    temp.push(100)
+    console.log(temp)
+    let names=[]
+    function add()
+    {
+        let name=document.getElementById("name").value
+        names.push(name)
+        // names.push("Karun")
+        // names.push("Tanmay")
+        document.getElementById("n").innerHTML = names.join(" | ");
+
+    }
+    </script>
+    <div id="n"></div>
+    <h1>Data Entry Form</h1>
+    <input type="text" id="name" placeholder="Enter Username">
+
+    <button onclick="add()">Add</button>
+    </body>
+</html>
