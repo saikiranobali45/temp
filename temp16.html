@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Function to store user data after registration
+      function addUser() {
+        // Get user input values
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const password = document.getElementById('reg-password').value;
+
+        // Store the data in localStorage (You can also use sessionStorage)
+        localStorage.setItem('username', name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+
+        // Redirect to login page
+        showLogin();
+      }
+
+      // Function to show the registration form
+      function showForm() {
+        let str = `
+        <h2>Registration Form</h2>
+        <p><input type="text" id="reg-name" placeholder="Name"></p>
+        <p><input type="text" id="reg-email" placeholder="Email"></p>
+        <p><input type="password" id="reg-password" placeholder="Password"></p>
+        <p><input type="date"></p>
+        <p><button onclick="addUser()">Submit</button></p>
+        <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+        `;
+        root.innerHTML = str;
+      }
+
+      // Function to show the login form
+      function showLogin() {
+        let str = `
+        <div>
+            <h2>Login Form</h2>
+            <p><input type="text" id="login-username" placeholder="Username"></p>
+            <p><input type="password" id="login-password" placeholder="Password"></p>
+            <button onclick="validateLogin()">Log In</button>
+            <p><button onclick='showForm()'>Create Account</button></p>
+        </div>
+        `;
+        root.innerHTML = str;
+      }
+
+      // Function to validate the login credentials
+      function validateLogin() {
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+        const inputUsername = document.getElementById('login-username').value;
+        const inputPassword = document.getElementById('login-password').value;
+
+        // Check if input matches the stored values
+        if (inputUsername === storedUsername && inputPassword === storedPassword) {
+          showWelcome();
+        } else {
+          alert('Invalid credentials. Please try again.');
+        }
+      }
+
+      // Function to show the welcome message after successful login
+      function showWelcome() {
+        let str = `<h2>Welcome!!</h2>
+        <button onclick="showLogin()">Log out</button>`;
+        root.innerHTML = str;
+      }
+    </script>
+  </head>
+  <body onload="showLogin()">
+    <div id="root"></div>
+  </body>
+</html>

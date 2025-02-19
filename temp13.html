@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ap() {
+            // Get the values from input fields and parse them as numbers
+            let n1 = parseFloat(document.getElementById("one").value);
+            let n2 = parseFloat(document.getElementById("two").value);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+            // Perform arithmetic operations
+            let addition = n1 + n2;
+            let subtraction = n1 - n2;
+            let multiplication = n1 * n2;
+            let division;
+
+            if (n2 === 0) {
+                alert("Denominator can't be zero!");
+                division = "Undefined (Division by zero)";
+            } else {
+                division = (n1 / n2).toFixed(2);
+            }
+
+            // Display results in the HTML
+            document.getElementById("addition").innerText = "Addition: " + addition;
+            document.getElementById("subtraction").innerText = "Subtraction: " + subtraction;
+            document.getElementById("multiplication").innerText = "Multiplication: " + multiplication;
+            document.getElementById("division").innerText = "Division: " + division;
+        }
+    </script>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+    <p>Enter first number: <input type="text" id="one"></p>
+    <p>Enter second number: <input type="text" id="two"></p>
+    <button onclick="ap()">Submit</button>
+
+    <h2>Results:</h2>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+</body>
+</html>

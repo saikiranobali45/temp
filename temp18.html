@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color & Background</title>
+</head>
+<body>
+
+    <input type="text" id="colorInput" placeholder="Enter text color" style="height: 30px; width: 200px;"><br><br>
+    <button onclick="changeColor()" style="height: 40px; width: 120px; color: white; background-color: black;">Submit</button>
+    
+    <p id="text">This text will change color</p>
+
+    <label for="bg">Select Background:</label>
+    <select id="bg" onchange="bgcolor()" style="height: 35px;">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        function changeColor() {
+            document.getElementById("text").style.color = document.getElementById("colorInput").value;
+        }
+
+        function bgcolor() {
+            document.getElementById("text").style.backgroundColor = document.getElementById("bg").value;
+        }
+    </script>
+
+</body>
+</html>
