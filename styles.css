@@ -1,0 +1,90 @@
+
+.header {
+  
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        /* padding: 10px 20px; 
+        padding-bottom: 10px;
+        width: 100%;
+        background-color: navy;
+        color: white;
+        height: 80px;
+        border-radius: 12px;
+        box-sizing: border-box;  */
+    
+    
+}
+.row {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box {
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.row button {
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+/* #h1 {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 98%;
+    line-height: 60px; Centers text vertically
+    margin: 0 auto; /* Centers the div horizontally */
+    border-radius: 8px; Optional: Rounds the corners */
+/* } */
+/* Header */
+.header {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.nav-btn {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: darkblue;
+}
+
+/* Footer */
+.footer-text {
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+}
+
